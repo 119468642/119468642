@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+		<head>
+		 <title>Basic Calculator with Radio button </title>
+    		<style>
+    			body,h1 {
+    				font-family:arial;
+    				font-size:18px;
+    				}
+    			
+    			label{
+    				width: 7em;
+    				float: left;
+    				text-align: right;
+    				margin-right: 0.8em;
+    				display: block
+    				}
+    
+    			h1 {
+    				font-family:arial;
+    				padding-left: 37px;
+    			}
+    		.message {
+    				color: blue;
+    				font-family:arial;
+    				font-size:18px;
+    				font-weight:bolder;
+    				padding-left: 38px;
+    }
+    			.warning {
+    				color: red;
+    				font-family:arial;
+    				font-size:18px;
+    			font-weight:bolder;
+    				padding-left: 38px;
+    	}
+    	 </style>	
+    	 <script>
+    function solve() {
+    var btn = document.getElementsByName("math");
+    				 var price1 = 100;
+    				var price2 = 200;
+					var vat = (totalsum*0.20);
+    				 
+    				if (price1=="") {
+    				
+					
+    				var msg = "<span class='warning'>HyperAutomation</span>";
+    document.getElementById('msg').innerHTML = msg;
+    					return false;
+    				} 
+    			 else if (price2=="") {
+    				 var msg = "<span class='warning'>Multi Experience</span>";
+    document.getElementById('msg').innerHTML = msg;
+    					return false;
+    				}
+				else if (vat=="") {
+					var msg= "<span class='warning'>Adding VAT</span>
+	document.getElementById('msg').innerHTML= msg;
+						return false
+					}
+    				 
+    if (btn1.checked == true) {
+    				 
+    				totalsum = parseInt(price1) + parseInt(vat);
+    							
+    results = "<span class='message'> The sum of " + price1
+    					+ " and " + price2 + " is " + sum +".</span>";
+    					document.getElementById('msg').innerHTML = results;
+    					return false;
+    } else if (btn1.checked == true) {
+    sum = parseInt(price1) + parseInt(vat);
+    					
+    results = "<span class='message'> Total cost of services: " 
+    					+ price1 + " and " + vat+ " is " + sum +".</span>";
+    				document.getElementById('msg').innerHTML = results;
+    					return false;
+    } else if (btn1.checked == true) {
+    product = parseInt(price1) *parseInt(price2);
+    					
+    } 
+    								
+    				
+    				return true;
+    }
+    function reset_msg() {
+    document.getElementById('msg').innerHTML = '';
+    	 }
+    			 
+    			 function clear()
+    			 {
+    			document.getElementById('msg').innerHTML = "";
+    			price1="";
+    			price2="";
+    			no_one.focus();
+    			 }
+				 
+	var price1 =4;
+	if (btn1.checked == true)
+	return a * vat 
+	
+    </script>
+    </head>
+    <body>
+    	<br>
+    	<h1> Basic Calculator Using Radio Button </h1>
+    		<br>
+			<form action="" method="POST">
+    		 <label for="first_value">
+    		 Hyper Automation (100)
+    		 
+    		 </label>
+    		 <input type="radio" name="price1" id="price1" value="100" autofocus>
+    		 <br><br>
+    		 <label for="second_value">
+    		Multi Experience (200)
+    		</label>
+    		<input type="radio" name="price2" id="price2" value="200">
+    	 <br><br>
+		 
+		 
+		 
+		 
+		 
+		 
+    			<br> <label for="radio1">
+    		
+    <input type="radio" name="btn1" onclick="reset_msg();" />Add VAT
+   
+    			</label>
+    <input type="radio" name="btn2" onclick="reset_msg();" /> Add Discount
+    
+ 
+
+    			 <br><br>
+
+    			<input type="submit" value="Compute" onclick="return solve();" />
+    
+    			<input type="submit" value="Clear" onclick="return clear();" />
+    			<br><br>
+    <div id="msg"></div>
+    </form>
+    </body>
+		
+		</head>
+			
+</html>
